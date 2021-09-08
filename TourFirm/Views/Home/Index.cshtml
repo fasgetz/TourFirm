@@ -6,8 +6,8 @@
     <header>
 
         <nav class="header navbar nav navbar-expand-md navbar-toggleable-md navbar-dark box-shadow">
-            <div class="container-lg">
-                <a class="navbar-brand" asp-controller="Home" asp-action="Index"><img class="img-logo" src="img/logo.png" alt="logo"></a>
+            <div class="container-lg p-0">
+                <a class="navbar-brand" href="#"><img class="img-logo" src="img/logo.png" alt="logo"></a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                     <div class="navbar-toggler-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"></div>
@@ -63,7 +63,7 @@
         </h3>
         <div class="row d-block d-md-none mt-3">
             <div class="col-12">
-                <div class="offer-item p-4">
+                <div class="offer-item p-3">
                     <div class="offer-item__img d-flex justify-content-center">
                         <img src="img/greece.jpg" class="d-block w-100" alt="tour">
                     </div>
@@ -73,7 +73,7 @@
                 </div>
             </div>
             <div class="col-12">
-                <div class="offer-item p-4">
+                <div class="offer-item p-3">
                     <div class="offer-item__img d-flex justify-content-center">
                         <img src="img/bulg.jpg" class="d-block w-100" alt="tour">
                     </div>
@@ -83,7 +83,7 @@
                 </div>
             </div>
             <div class="col-12">
-                <div class="offer-item p-4">
+                <div class="offer-item p-3">
                     <div class="offer-item__img d-flex justify-content-center">
                         <img src="img/tourke.jpg" class="d-block w-100" alt="tour">
                     </div>
@@ -145,7 +145,6 @@
                 <a class="btn text-white" href="#">Прайс лист</a>
             </div>
         </div>
-    </div>
 </section>
 <section class="special-prices">
     <div class="pt-5">
@@ -159,7 +158,7 @@
             <div class="row">
                 <div class="col-lg-6 col-12">
                     <div class="tour-present p-3">
-                        <a href="#"><img src="img/egipet.jpg" alt="tour"></a>
+                        <a class="d-flex justify-content-center" href="#"><img src="img/egipet.jpg" alt="tour"></a>
                         <h5 class="tour-present__header mt-3">Египет <span>Visa</span></h5>
                         <div class="tour-present__about">
                             Египет - это великолепная Хургада, популярный Шарм-эль-Шейх, Эль Гуна, которую называют египетской Венецией, климатический санаторий Сафага, Макади Бей, полюбившийся дайверам Дахаб, Таба.
@@ -189,7 +188,7 @@
                             <a class="btn" href="#">Прайс лист</a>
                         </div>
                     </div>
-                    <div class="text-muted text-center">Низкие цены, которые мы для Вас составляем, гарантируют, что Вы сможете подобрать для себя подходящий незабываемый тур!</div>
+                    <div class="text-muted text-center d-lg-block d-none">Низкие цены, которые мы для Вас составляем, гарантируют, что Вы сможете подобрать для себя подходящий незабываемый тур!</div><div class="text-muted text-center d-none d-lg-block">Низкие цены, которые мы для Вас составляем, гарантируют, что Вы сможете подобрать для себя подходящий незабываемый тур!</div>
                 </div>
             </div>
         </div>
@@ -327,7 +326,7 @@
     <div class="container">
         <h3 class="text-center pt-5 text-uppercase">
             не знаете что выбрать?
-            <div class="pt-3 header__about-text header__about-text">
+            <div class="pt-3 d-lg-block d-none header__about-text header__about-text">
                 Доверьтесь нам и мы подберем для Вас самый незабываемый отдых
             </div>
         </h3>
@@ -350,7 +349,7 @@
                         <option selected>5*</option>
                     </select>
                 </div>
-                <div class="form-group">
+                <div class="form-group d-lg-block d-none">
                     <label for="exampleFormControlSelect1">Количество человек</label>
                     <select class="form-control" id="exampleFormControlSelect1">
                         <option>1</option>
@@ -361,11 +360,11 @@
                     </select>
                 </div>
                 <div class="form-row mt-3">
-                    <div class="form-group col-6 p-1">
+                    <div class="form-group col-6 p-1 d-lg-block d-none">
                         <label for="exampleFormControlSelect1">Дата вылета</label>
                         <input class="form-control" type="date">
                     </div>
-                    <div class="form-group col-6 p-1">
+                    <div class="form-group col-6 p-1 d-lg-block d-none">
                         <label for="exampleFormControlSelect1">На сколько дней?</label>
                         <input class="form-control" type="number" min="1" max="100" value="7">
                     </div>
