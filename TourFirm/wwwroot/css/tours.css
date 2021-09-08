@@ -1,0 +1,17 @@
+
+
+.tour-present__header span {
+  color: #ec933d;
+    font: 12px openSansRegular;
+    vertical-align: top;
+    line-height: 22px;
+    margin-left: 3px;
+}
+
+.tour-present img {
+  /* height: 200px;
+  width: auto; */
+  width: 100%;
+   height: 100%;
+  border-radius: 5px;
+}

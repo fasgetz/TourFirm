@@ -1,0 +1,414 @@
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-inline .form-control {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+.phone-number {
+  font-size: 28px;
+  color: #000a4b;
+  font-family: "Roboto Condensed",Verdana,Tahoma,sans-serif;
+  text-decoration: none;
+}
+
+
+.menu-mobile {
+    background: url(../img/bg8-1.jpg) no-repeat 50% 50%;
+    color: white;
+}
+
+.menu-mobile a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.img-logo {
+  height: auto;
+  width: 290px
+}
+
+/* Первый информативный блок */
+
+.inform-block .header {
+  background: rgba(0,0,0,.2);
+}
+
+.information_block {
+  background-image: url(../img/bg-inform.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.information_block h3 {
+  line-height: 34px;
+  color: #d4d9fa
+}
+
+.inform-block {
+
+  background-image: url(../img/screen-14.jpg);
+  background-position: right center;
+    background-size: cover;
+  background-repeat: no-repeat;
+  color: #000a4b;
+}
+
+.inform-block .nav-item a {
+    color: #000a4b !important;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.inform-block .nav-item a:hover, .navbar-brand:hover {
+    transform: scale(1.2)
+}
+
+
+
+.inform-block__button .btn {
+    width: 300px;
+    font-size: 20px;
+    border-radius: 7px;
+    height: 33px;
+    line-height: 33px;
+    background-color: #14638e;
+    box-shadow: 0 4px 0 #636ca6;
+    box-sizing: content-box;
+    color: white;
+}
+
+.inform-block__button .btn:hover {
+  transform: scale(1.2)
+}
+
+.inform-block__about  {
+  margin-top: 180px;
+
+}
+
+.about__info h1, .about__info div {
+  text-shadow: 0px 0px 5px white, 0px 0px 10px white, 0px 0px 10px white
+}
+
+
+.about__info {
+  /* font-size: 1.2rem; */
+  font-weight: bold;
+}
+
+
+/* Как мы работаем блок (схема работы) */
+.how-job__block {
+  background: #17ade8;
+  color: white;
+}
+
+how-job__block h3 {
+  padding-top: 100px;
+}
+
+.how-job__block__header {
+
+  font-weight: bold;
+}
+
+.how-job__block__items {
+  margin-top: 100px;
+}
+
+
+.title {
+    /* Чтобы спрятать часть линий, которые
+    ** будут вылазить за пределы блока */
+    overflow: hidden;
+    /* Выравнивание заголовка по центру,
+    ** можно использовать left, right */
+    text-align: center;
+    /* Тут можно добавить другие стили для заголовка */
+    font-size: 30px;
+}
+.title span {
+    /* Стили тега обертки для заголовков
+    ** в несколько строк */
+    display: inline-block;
+    vertical-align: middle;
+}
+.title:before,
+.title:after {
+    /* Обязательно указываем пустое свойство content,
+    ** иначе псевдоэлементы не появятся на сайте */
+    content: "";
+    /* Указываем что наши линии будут строчно-блочные и
+    ** выравнивание по высоте - по центру */
+    display: inline-block;
+    vertical-align: middle;
+    /* Задаем ширину 100% и выбираем высоту линии,
+    ** в нашем примере она равна 4 пикселям */
+    width: 100%;
+    height: 4px;
+    /* Добавляем цвет для линии */
+    background-color: #89d9f7;
+    /* Добавляем пседоэлемантам возможность изменить
+    ** позицию линии, для создания отступов от текста */
+    position: relative;
+}
+.title:before {
+    /* Смещаем левую линию на 100% влево, чтобы линия
+    ** встала рядом с текстом слева */
+    margin-left: -100%;
+    /* Указываем в пикселях отступ линии от текста заголовка */
+    left: -50px;
+}
+.title:after {
+    /* Смещаем правую линию на 100% вправо, чтобы
+    ** линия встала рядом с текстом справа */
+    margin-right: -100%;
+    /* Указываем в пикселях отступ линии от текста заголовка */
+    right: -50px;
+}
+
+
+.how-job__item__img img {
+  width: 100%;
+  height: auto;
+}
+
+.how-job__item__number {
+  font-size: 50px;
+}
+
+.how-job__item__header {
+  font-size: 1.3rem
+}
+
+/* Второй блок - что мы предлагаем */
+
+.offer-block {
+  background-image: url(../img/bg-5.jpg);
+  background-position: right center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.offer-block h3 {
+      color: #393749;
+      font-size: 3rem;
+      font-weight: 800;
+      text-transform: uppercase;
+}
+
+.carousel-caption {
+    bottom: 55% !important;
+    color: white;
+    text-shadow: 0px 0px 5px black, 0px 0px 10px black, 0px 0px 10px black
+  }
+
+.carousel-item img {
+  border-radius: 25px;
+}
+
+.offer-item__img {
+
+}
+
+
+.offer-item img {
+  border-radius: 25px
+}
+
+.offer-item__header {
+  color: white;
+  margin-top: -80px;
+  padding-left: 30px;
+  text-shadow: 0px 0px 5px black, 0px 0px 10px black, 0px 0px 10px black
+}
+
+.offer-item__header h5 {
+  font-size: 30px;
+}
+
+.offer-item__header h5 span {
+    color: #ec933d;
+    font: 18px openSansRegular;
+    vertical-align: top;
+    line-height: 12px;
+    margin-left: 3px;
+}
+
+
+/* Специальные предложения */
+
+.special-prices {
+  background-image: url(../img/bg-3.jpg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  /* position: relative; */
+  /* padding-top: 70px;
+  padding-bottom: 50px; */
+}
+
+
+.special-prices h3 {
+  color: #393749;
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.special-prices h3>div {
+    margin-top: 5px;
+    color: #393749;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: none;
+}
+
+
+/* Что вы получаете в итоге */
+
+.result-block {
+  background-image: url(../img/bg-2.jpg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  color: white
+}
+
+
+.result-block h3 {
+  color: white;
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.result-block h3>div {
+    margin-top: 5px;
+    color: white;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.result-block .text-title {
+  font-size: 115%;
+  font-weight: bold
+}
+
+.result-block__text-description {
+  font-size: 30px;
+}
+
+
+/* Не знаете что выбрать - блок */
+
+.what-choose__block {
+  background-image: url(../img/beach-sea.jpg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+
+.what-choose__block h3 {
+  color: #393749;
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.what-choose__block h3>div {
+    margin-top: 5px;
+    color: #393749;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.what-choose__block__form .form-group {
+  color: #000a4b !important;
+  font-weight: bold !important;
+}
+
+.what-choose__block .header-bid {
+  font-size: 18px;
+  color: #000a4b;
+  font-weight: bold;
+}
+
+.what-choose__block button {
+  font-size: 18px;
+  width: 75% !important;
+}
+
+
+@media (max-width: 1199px){
+  .carousel-caption {
+    bottom: 35% !important;
+  }
+}
+
+@media (max-width: 992px){
+  .carousel-caption {
+    bottom: 15% !important;
+  }
+}
+
+@media (max-width: 768px){
+
+  .how-job__block__items {
+    margin-top: 50px;
+  }
+
+  /* .carousel-caption {
+    bottom: 50% !important;
+  } */
+
+  .how-job__item__img {
+    padding: 0 !important;
+  }
+
+  .how-job__item__img img {
+    width: 50%;
+  }
+
+  .special-prices h3, .result-block h3, .what-choose__block h3, .offer-block h3 {
+    font-size: 20px
+  }
+
+  .header__about-text  {
+    font-size: 18px !important
+  }
+
+
+  .inform-block__about  {
+    margin-top: 80px;
+
+  }
+
+  .about__info {
+    /* color: #9fa5b5; */
+    /* font-weight: bold */
+  }
+
+}

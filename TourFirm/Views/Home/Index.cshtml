@@ -1,0 +1,410 @@
+﻿@{
+    ViewData["Title"] = "ПУТЕВКИ В ТУРЦИЮ БОЛГАРИЮ ГРЕЦИЮ";
+}
+
+<section class="inform-block">
+    <header>
+
+        <nav class="header navbar nav navbar-expand-md navbar-toggleable-md navbar-dark box-shadow">
+            <div class="container-lg">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index"><img class="img-logo" src="img/logo.png" alt="logo"></a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <div class="navbar-toggler-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"></div>
+                </button>
+
+                <div class="d-none d-md-block">
+                    <a class="phone-number text-center d-none d-lg-block" href="tel:+79629007965">+7-962-900-79-65</a>
+                    <div class="navbar-collapse collapse d-md-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item p-1">
+                                <a class="nav-link btnactive" href="#payment">Прайс лист</a>
+                            </li>
+                            <li class="nav-item p-1">
+                                <a class="nav-link btn " href="#payment">Контакты</a>
+                            </li>
+                            <li class="nav-item p-1">
+                                <a class="nav-link btn " href="#chat">Оферта</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container-md text-center d-block d-md-none">
+                <a class="phone-number" href="tel:+79629007965">+7-962-900-79-65</a>
+            </div>
+
+        </nav>
+
+    </header>
+    <div class="inform-block__about container d-flex justify-content-center align-items-center">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="about__info">
+                    <h1>Выбор услуг от ООО «ПРОСТО КЭМП» - лучшее решение для проведения отдыха в любой точке мира!</h1>
+                    <div class="mt-3">
+                        Мы подберем для Вас самый подходящий и выгодный тур без наценок и переплат с оптимальных соотношением цены и качества, который доставит Вам массу незабываемых впечатлений от путешествия!
+                    </div>
+                </div>
+                <div class="inform-block__button mt-5">
+                    <div class="row justify-content-center pb-3">
+                        <a class="btn" href="#">Прайс лист</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="offer-block">
+    <div class="container">
+        <h3 class="text-center pt-5">
+            Основные предложения стран отдыха
+        </h3>
+        <div class="row d-block d-md-none mt-3">
+            <div class="col-12">
+                <div class="offer-item p-4">
+                    <div class="offer-item__img d-flex justify-content-center">
+                        <img src="img/greece.jpg" class="d-block w-100" alt="tour">
+                    </div>
+                    <div class="offer-item__header">
+                        <h5 class="mt-3">Греция <span>Visa</span></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="offer-item p-4">
+                    <div class="offer-item__img d-flex justify-content-center">
+                        <img src="img/bulg.jpg" class="d-block w-100" alt="tour">
+                    </div>
+                    <div class="offer-item__header">
+                        <h5 class="mt-3">Болгария <span>Visa</span></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="offer-item p-4">
+                    <div class="offer-item__img d-flex justify-content-center">
+                        <img src="img/tourke.jpg" class="d-block w-100" alt="tour">
+                    </div>
+                    <div class="offer-item__header">
+                        <h5 class="mt-3">Турция <span>Без визы</span></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="carouselExampleCaptions" class="d-none d-md-block carousel slide mt-3" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner pt-5">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-center">
+                        <img src="img/tourke.jpg" class="d-block w-75" alt="tour">
+                    </div>
+                    <div class="carousel-caption">
+                        <h5 class="tour-present__header mt-3">Турция <span>Без визы</span></h5>
+                        <p class="mt-3">Турция — популярный выбор российских и европейских туристов. Здесь доступные цены, отличный сервис и теплое море 6 месяцев в году. Проводить отпуск в этой стране нравится не только поклонникам пляжного отдыха, но и любителям познавательных экскурсий и ночных развлечений</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <img src="img/bulg.jpg" class="d-block w-75" alt="tour">
+                    </div>
+                    <div class="carousel-caption">
+                        <h5 class="tour-present__header mt-3">Болгария <span>Visa</span></h5>
+                        <p>Болгария каждый год распахивает для туристов свои объятья. Здесь вас ждет огромное разнообразие отелей, завораживающие пейзажи, старинные руины крепостей и многое другое. В Болгарии найдется где отдохнуть семьям с детьми, молодым людям и их родителям. Эта страна предлагает большой выбор развлечений на любой вкус и достаток</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <img src="img/greece.jpg" class="d-block w-75" alt="tour">
+                    </div>
+                    <div class="carousel-caption">
+                        <h5 class="tour-present__header mt-3">Греция <span>Visa</span></h5>
+                        <p>Среди курортов Греции найдется что-то свое для всех — хотите ли вы уединения или танцев до упаду, встречи с увлекательным миром мифических богов и древностей или активного отдыха. У всех курортов Греции средиземноморский климат с жарким летом и мягкой зимой. Самый южный курорт — Крит , поэтому здесь самый продолжительный пляжный сезон</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <h5 class="text-center mt-5 d-none d-lg-block">
+            Многие другие предложения Вы также сможете найти в прайс листе
+        </h5>
+        <div class="inform-block__button mt-3">
+            <div class="row justify-content-center pb-3">
+                <a class="btn text-white" href="#">Прайс лист</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="special-prices">
+    <div class="pt-5">
+        <div class="container">
+            <h3 class="text-center">
+                Специальные предложения
+                <div class="pt-3 header__about-text">
+                    скидки и актуальные горящие туры
+                </div>
+            </h3>
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <div class="tour-present p-3">
+                        <a href="#"><img src="img/egipet.jpg" alt="tour"></a>
+                        <h5 class="tour-present__header mt-3">Египет <span>Visa</span></h5>
+                        <div class="tour-present__about">
+                            Египет - это великолепная Хургада, популярный Шарм-эль-Шейх, Эль Гуна, которую называют египетской Венецией, климатический санаторий Сафага, Макади Бей, полюбившийся дайверам Дахаб, Таба.
+                        </div>
+                        <div class="tour-present__price text-muted mt-3">
+                            от 2 699 руб./чел. сутки
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 d-lg-block d-none">
+                    <div class="tour-present p-3">
+                        <a href="#"><img src="img/tour1.jpg" alt="tour"></a>
+                        <h5 class="tour-present__header mt-3">Турция <span>Без визы</span></h5>
+                        <div class="tour-present__about">
+                            Отдых в Турции – это лазурное море, бескрайние пляжи
+                            Анталийского побережья и отели на любой вкус, это шумные рынки
+                            Стамбула и чайки над Босфором, это сказочная Каппадокия и Мармарис.
+                        </div>
+                        <div class="tour-present__price text-muted mt-3">
+                            от 2 200 руб./чел. сутки
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 d-lg-none d-block">
+                    <div class="inform-block__button mt-3">
+                        <div class="row justify-content-center pb-3">
+                            <a class="btn" href="#">Прайс лист</a>
+                        </div>
+                    </div>
+                    <div class="text-muted text-center">Низкие цены, которые мы для Вас составляем, гарантируют, что Вы сможете подобрать для себя подходящий незабываемый тур!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="how-job__block">
+    <div class="container">
+        <h3 class="text-center pt-5 how-job__block__header title">
+            СХЕМА РАБОТЫ<h3>
+                <div class="how-job__block__items row text-center">
+                    <div class="col-lg-3 col-6">
+                        <div class="how-job__item">
+                            <div class="how-job__item__number text-center">
+                                1
+                            </div>
+                            <div class="how-job__item__img p-5">
+                                <img src="img/opportunity.png" alt="">
+                            </div>
+                            <div class="how-job__item__header mt-3">
+                                Выбираете тур на сайте
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <div class="how-job__item">
+                            <div class="how-job__item__number text-center">
+                                2
+                            </div>
+                            <div class="how-job__item__img p-5">
+                                <img src="img/payment-method.png" alt="">
+                            </div>
+                            <div class="how-job__item__header mt-3 d-lg-block d-none">
+                                Оплачиваете удобным для Вас способом с помощью системы электронных онлайн платежей
+                            </div>
+                            <div class="how-job__item__header mt-3 d-block d-lg-none">
+                                Оплачиваете удобным для Вас способом
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6 mt-3 mt-lg-0">
+                        <div class="how-job__item">
+                            <div class="how-job__item__number text-center">
+                                3
+                            </div>
+                            <div class="how-job__item__img p-5">
+                                <img src="img/clipboard.png" alt="">
+                            </div>
+                            <div class="how-job__item__header mt-3">
+                                Подготавливаем и выдаем вам необходимые документы
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6 mt-3 mt-lg-0">
+                        <div class="how-job__item">
+                            <div class="how-job__item__number text-center">
+                                4
+                            </div>
+                            <div class="how-job__item__img p-5">
+                                <img src="img/sunbathing.png" alt="">
+                            </div>
+                            <div class="how-job__item__header mt-3">
+                                Наслаждаетесь отдыхом
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inform-block__button mt-5">
+                    <div class="row justify-content-center pb-3">
+                        <a class="btn" href="#">Остались вопросы?</a>
+                    </div>
+                </div>
+    </div>
+</section>
+
+<section class="result-block">
+    <div class="container">
+        <h3 class="text-center pt-5">
+            ЧТО ВЫ ПОЛУЧАЕТЕ В ИТОГЕ
+            <!-- <div class="pt-3 header__about-text text-muted">
+              выбирая путешествие вместе с нами
+            </div> -->
+        </h3>
+        <div class="row mt-3 mt-lg-5">
+            <div class="col-lg-6 col-12">
+                <div class="text-title">
+                    <img src="img/chasi.png" alt="logo"> ЭКОНОМИЯ ВРЕМЕНИ
+                </div>
+                <div class="text-about mt-3">
+                    Вы сэкономите десятки часов так как вам
+                    не нужно будет просматривать сайты, читать
+                    кучу отзывов и мнений, подбирать билеты
+                    и отели, искать решения для оформления
+                    документов чтобы подобрать подходящий
+                    вариант путешествия, всю эту работу мы
+                    берем на себя.
+                </div>
+            </div>
+            <div class="col-lg-6 col-12 pt-3 pt-lg-0">
+                <div class="text-title">
+                    <img src="img/money.png" alt="logo"> ЭКОНОМИЯ ДЕНЕГ
+                </div>
+                <div class="text-about mt-3">
+                    Часто при подборе туров многие не учитывают траты с
+                    которыми приходиться сталкиваться на месте отдыха, мы же учтем
+                    все нюансы и сможем максимально сэкономить ваш бюджет.
+                </div>
+            </div>
+        </div>
+        <div class="row mt-lg-5 mt-0 justify-content-center">
+            <div class="col-12 col-lg-6 justify-content-center pt-3">
+                <div class="text-title">
+                    <img src="img/sun.png" alt="logo"> ПОЛОЖИТЕЛЬНЫЕ ЭМОЦИИ ОТ ПУТЕШЕСТВИЯ
+                </div>
+                <div class="text-about mt-3">
+                    При подборе тура можно не учесть разницу во времени,стыковку рейсов,
+                    комфорт и расположение номера. С нами вы можете забыть об этих заботах
+                    и быть уверенными в
+                    полном сопровождении: от выбора тура до прилета с отдыха
+                </div>
+            </div>
+        </div>
+        <div class="result-block__text-description mt-5 text-center d-lg-block d-none">
+            Осталось подобрать отдых, исходя из ваших желаний, а остальные заботы мы возьмем на себя
+            <div class="inform-block__button mt-3">
+                <div class="row justify-content-center pb-3">
+                    <a class="btn" href="#">Прайс лист</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="what-choose__block">
+    <div class="container">
+        <h3 class="text-center pt-5 text-uppercase">
+            не знаете что выбрать?
+            <div class="pt-3 header__about-text header__about-text">
+                Доверьтесь нам и мы подберем для Вас самый незабываемый отдых
+            </div>
+        </h3>
+        <form class="what-choose__block__form row mt-lg-5 mt-3">
+            <div class="col-lg-7 col-12">
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Выберите страну путешествия</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>Болгария</option>
+                        <option>Турция</option>
+                        <option>Греция</option>
+                    </select>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="exampleFormControlSelect1">Выберите класс отеля</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>2*</option>
+                        <option>3*</option>
+                        <option>4*</option>
+                        <option selected>5*</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Количество человек</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>1</option>
+                        <option selected>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-row mt-3">
+                    <div class="form-group col-6 p-1">
+                        <label for="exampleFormControlSelect1">Дата вылета</label>
+                        <input class="form-control" type="date">
+                    </div>
+                    <div class="form-group col-6 p-1">
+                        <label for="exampleFormControlSelect1">На сколько дней?</label>
+                        <input class="form-control" type="number" min="1" max="100" value="7">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Бюджет поездки (на всех)</label>
+                    <input class="form-control" type="number" min="5000" max="1000000" value="30000">
+                </div>
+            </div>
+            <div class="col-lg-5 col-12 mt-lg-0 mt-3">
+                <div class="header-bid text-center text-uppercase">
+                    Заполните заявку
+                </div>
+                <div class="form-group mt-lg-1 mt-3">
+                    <input class="form-control" type="text" placeholder="Ваше имя">
+                </div>
+                <div class="form-group mt-3">
+                    <input class="form-control" type="text" placeholder="Ваш телефон">
+                </div>
+                <div class="form-group mt-3">
+                    <input class="form-control" type="text" placeholder="Ваш email">
+                </div>
+                <div class="form-group mt-3">
+                    <textarea class="form-control d-lg-block d-none" rows="7" maxlength="200" placeholder="Введите ваше сообщение"></textarea>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label text-muted" for="flexCheckDefault">
+                        Согласен с политикой защиты данных
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary w-25 mt-lg-3 mt-0">Оставить заявку</button>
+            </div>
+        </form>
+    </div>
+
+
+</section>
