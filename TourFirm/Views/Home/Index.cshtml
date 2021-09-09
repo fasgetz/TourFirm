@@ -7,7 +7,7 @@
 
         <nav class="header navbar nav navbar-expand-md navbar-toggleable-md navbar-dark box-shadow">
             <div class="container-lg p-0">
-                <a class="navbar-brand" href="#"><img class="img-logo" src="img/logo.png" alt="logo"></a>
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index"><img asp-append-version="true" class="img-logo" src="img/logo.png" alt="logo"></a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                     <div class="navbar-toggler-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"></div>
@@ -18,7 +18,7 @@
                     <div class="navbar-collapse collapse d-md-inline-flex justify-content-between">
                         <ul class="navbar-nav flex-grow-1">
                             <li class="nav-item p-1">
-                                <a class="nav-link btnactive" href="#payment">Прайс лист</a>
+                                <a class="nav-link btnactive" asp-controller="Tour" asp-action="Index">Онлайн туры</a>
                             </li>
                             <li class="nav-item p-1">
                                 <a class="nav-link btn " href="#payment">Контакты</a>
@@ -49,7 +49,7 @@
                 </div>
                 <div class="inform-block__button mt-5">
                     <div class="row justify-content-center pb-3">
-                        <a class="btn" href="#">Прайс лист</a>
+                        <a class="btn" asp-controller="Tour" asp-action="Index">Онлайн туры</a>
                     </div>
                 </div>
             </div>
@@ -142,7 +142,7 @@
         </h5>
         <div class="inform-block__button mt-3">
             <div class="row justify-content-center pb-3">
-                <a class="btn text-white" href="#">Прайс лист</a>
+                <a class="btn text-white" asp-controller="Tour" asp-action="Index">Онлайн туры</a>
             </div>
         </div>
 </section>
@@ -185,7 +185,7 @@
                 <div class="col-12 d-lg-none d-block">
                     <div class="inform-block__button mt-3">
                         <div class="row justify-content-center pb-3">
-                            <a class="btn" href="#">Прайс лист</a>
+                            <a class="btn" asp-controller="Tour" asp-action="Index">Онлайн туры</a>
                         </div>
                     </div>
                     <div class="text-muted text-center d-lg-block d-none">Низкие цены, которые мы для Вас составляем, гарантируют, что Вы сможете подобрать для себя подходящий незабываемый тур!</div><div class="text-muted text-center d-none d-lg-block">Низкие цены, которые мы для Вас составляем, гарантируют, что Вы сможете подобрать для себя подходящий незабываемый тур!</div>
@@ -315,7 +315,7 @@
             Осталось подобрать отдых, исходя из ваших желаний, а остальные заботы мы возьмем на себя
             <div class="inform-block__button mt-3">
                 <div class="row justify-content-center pb-3">
-                    <a class="btn" href="#">Прайс лист</a>
+                    <a class="btn" asp-controller="Tour" asp-action="Index">Онлайн туры</a>
                 </div>
             </div>
         </div>
