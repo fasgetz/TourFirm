@@ -4,7 +4,7 @@
 }
 
 <div id="app">
-    <section class="popular-block mt-3">
+    <section class="popular-block mt-3" v-if="popularTours != null">
         <div class="container">
             <h3><b>Популярные направления</b></h3>
             <div class="row mt-3">
@@ -17,45 +17,12 @@
             </div>
         </div>
     </section>
-    <section class="random-block mt-lg-5 mt-3">
+    <section class="random-block mt-lg-5 mt-3" v-if="randomTours != null">
         <div class="container">
             <h3><b>Случайные направления</b></h3>
             <div class="row mt-3">
-                <div class="col-lg-4 col-12 mt-3 mt-lg-0">
-                    <a href="#">
-                        <div class="popular-item">
-                            <div class="popular-item__price">
-                                от 48 284 ₽
-                            </div>
-                            <img src="img/tourke.jpg" alt="">
-                            <h5 class="popular-item__country">Турция</h5>
-                            <div class="popular-item__days"><span>5</span> ночей на двоих</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-12 mt-3 mt-lg-0">
-                    <a href="#">
-                        <div class="popular-item">
-                            <div class="popular-item__price">
-                                от 48 284 ₽
-                            </div>
-                            <img src="img/tourke.jpg" alt="">
-                            <h5 class="popular-item__country">Турция</h5>
-                            <div class="popular-item__days"><span>5</span> ночей на двоих</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-12 mt-3 mt-lg-0">
-                    <a href="#">
-                        <div class="popular-item">
-                            <div class="popular-item__price">
-                                от 48 284 ₽
-                            </div>
-                            <img src="img/tourke.jpg" alt="">
-                            <h5 class="popular-item__country">Турция</h5>
-                            <div class="popular-item__days"><span>5</span> ночей на двоих</div>
-                        </div>
-                    </a>
+                <div v-for="item in randomTours" class="col-lg-4 col-12 mt-3 mt-lg-0 d-flex justify-content-center">
+                    <tourcomponent v-bind:tour=item></tourcomponent>
                 </div>
             </div>
             <div class="d-flex justify-content-center mt-3">
@@ -68,5 +35,6 @@
 
 @section Scripts {
     <script src="~/scripts/HomeTour.js" asp-append-version="true"></script>
-    <script src="~/scripts/runtime~HomeTour.js" asp-append-version="true"></script>
+
+    
 }

@@ -42,7 +42,7 @@ module.exports = (env = {}) => ({
         }
     },
     optimization: {
-        runtimeChunk: true,
+        runtimeChunk: false,
         splitChunks: {
             cacheGroups: {
                 vendors: {
