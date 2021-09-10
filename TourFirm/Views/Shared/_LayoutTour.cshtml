@@ -13,7 +13,7 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
 
-    @await RenderSectionAsync("Scripts", required: false)
+    @await RenderSectionAsync("Css", required: false)
 </head>
 <body>
     <div class="d-block d-lg-none menu-mobile offcanvas offcanvas-start" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -180,6 +180,7 @@
         </div>
     </footer>
 
+    <script src="~/scripts/chunk-vendors.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
