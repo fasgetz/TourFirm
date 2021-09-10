@@ -98,7 +98,7 @@ namespace TourFirm.Models.DataBase
 
             modelBuilder.Entity<HotelPrice>(entity =>
             {
-                entity.HasKey(e => e.Int)
+                entity.HasKey(e => e.Id)
                     .HasName("PK_TourPrices");
 
                 entity.Property(e => e.PriceDay).HasColumnType("money");

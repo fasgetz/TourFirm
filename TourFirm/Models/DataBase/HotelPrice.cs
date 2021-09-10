@@ -7,7 +7,7 @@ namespace TourFirm.Models.DataBase
 {
     public partial class HotelPrice
     {
-        public int Int { get; set; }
+        public int Id { get; set; }
         public decimal? PriceDay { get; set; }
         public int? IdHotel { get; set; }
         public short? IdCategoryHotelNumber { get; set; }
