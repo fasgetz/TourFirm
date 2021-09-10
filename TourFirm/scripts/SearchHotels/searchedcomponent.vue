@@ -4,9 +4,6 @@
             <tourcomponent v-bind:tour=item></tourcomponent>
         </div>
     </div>
-    <div class="d-flex justify-content-center mt-3">
-        <a class="btn btn-outline-secondary" href="#">Все направления</a>
-    </div>
 </template>
 
 <script>

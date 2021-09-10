@@ -1,14 +1,100 @@
 ﻿@{
     Layout = "_LayoutTour";
+    ViewData["Title"] = "ОНЛАЙН ТУРЫ";
 }
 
 <div id="findedhotels">
-    <section class="popular-block mt-3">
+    <section class="popular-block mt-3 mb-5">
         <div class="container">
             <h3><b>Найденные туры</b></h3>
             <searchedcomponent v-bind:country="@ViewBag.idCountry" v-bind:days="@ViewBag.days" v-bind:humans="@ViewBag.countHumans"></searchedcomponent>
 
         </div>
+    </section>
+    <section class="what-choose__block container-fluid p-0 pb-5">
+        <div class="container">
+            <h3 class="text-center pt-5 text-uppercase">
+                не знаете что выбрать?
+                <div class="pt-3 d-lg-block d-none header__about-text header__about-text">
+                    Доверьтесь нам и мы подберем для Вас самый незабываемый отдых
+                </div>
+            </h3>
+            <form class="what-choose__block__form row mt-lg-5 mt-3">
+                <div class="col-lg-7 col-12">
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Выберите страну путешествия</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Болгария</option>
+                            <option>Турция</option>
+                            <option>Греция</option>
+                        </select>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="exampleFormControlSelect1">Выберите класс отеля</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>2*</option>
+                            <option>3*</option>
+                            <option>4*</option>
+                            <option selected>5*</option>
+                        </select>
+                    </div>
+                    <div class="form-group d-lg-block d-none">
+                        <label for="exampleFormControlSelect1">Количество человек</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>1</option>
+                            <option selected>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="form-row mt-3">
+                        <div class="form-group col-6 p-1 d-lg-block d-none">
+                            <label for="exampleFormControlSelect1">Дата вылета</label>
+                            <input class="form-control" type="date">
+                        </div>
+                        <div class="form-group col-6 p-1 d-lg-block d-none">
+                            <label for="exampleFormControlSelect1">На сколько дней?</label>
+                            <input class="form-control" type="number" min="1" max="100" value="7">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Бюджет поездки (на всех)</label>
+                        <input class="form-control" type="number" min="5000" max="1000000" value="30000">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-12 mt-lg-0 mt-3">
+                    <div class="header-bid text-center text-uppercase">
+                        Заполните заявку
+                    </div>
+                    <div class="form-group mt-lg-1 mt-3">
+                        <input class="form-control" type="text" placeholder="Ваше имя">
+                    </div>
+                    <div class="form-group mt-3">
+                        <input class="form-control" type="text" placeholder="Ваш телефон">
+                    </div>
+                    <div class="form-group mt-3">
+                        <input class="form-control" type="text" placeholder="Ваш email">
+                    </div>
+                    <div class="form-group mt-3">
+                        <textarea class="form-control d-lg-block d-none" rows="7" maxlength="200" placeholder="Введите ваше сообщение"></textarea>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label text-muted" for="flexCheckDefault">
+                            Согласен с политикой защиты данных
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary w-25 mt-lg-3 mt-0">Оставить заявку</button>
+                </div>
+            </form>
+        </div>
+
+
     </section>
 </div>
 

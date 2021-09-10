@@ -54,6 +54,8 @@ header h1 {
 
 .about__header, .form-group label {
   text-shadow: 0 2px 10px rgb(0 0 0 / 50%);
+  margin-top: 10px;
+  font-size: 16px !important;
 }
 
 
@@ -141,6 +143,65 @@ header h1 {
 }
 
 
+/* Не знаете что выбрать - блок */
+
+.what-choose__block {
+    background: #fbf4fa
+}
+
+
+    .what-choose__block h3 {
+        color: #393749;
+        font-size: 3rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+        .what-choose__block h3 > div {
+            margin-top: 5px;
+            color: #393749;
+            font-size: 2rem;
+            font-weight: 400;
+            text-transform: none;
+        }
+
+.what-choose__block__form .form-group {
+    color: #000a4b !important;
+    font-weight: bold !important;
+}
+
+.what-choose__block .header-bid {
+    font-size: 18px;
+    color: #000a4b;
+    font-weight: bold;
+}
+
+.what-choose__block button {
+    font-size: 18px;
+    width: 75% !important;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+}
+
+label {
+    margin-bottom: 0.5rem;
+}
 
 @media (max-width: 992px) {
     .button-login {

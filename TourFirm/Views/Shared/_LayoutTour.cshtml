@@ -82,10 +82,13 @@
             </div>
         </nav>
         <div class="container">
-            <h1 class="mt-4 mt-lg-5 text-center">Туры по всему миру от «ПРОСТО КЭМП»</h1>
-            <div class="text-center about__header">
-                <span>Подобрать идеальный тур для себя и всей семьи можно теперь онлайн. <br> Это легче, чем вы думаете!</span>
-            </div>
+            <h1 class="mt-4 mt-lg-5 text-center">
+                Туры по всему миру от «ПРОСТО КЭМП»
+                <div class="text-center about__header">
+                    <span>Подобрать идеальный тур для себя и всей семьи можно теперь онлайн. <br> Это легче, чем вы думаете!</span>
+                </div>
+            </h1>
+
             <div id="searchpanel">
                 <searchcomponent v-bind:country="@ViewBag.idCountry" v-bind:days="@ViewBag.days" v-bind:humans="@ViewBag.countHumans"></searchcomponent>
             </div>
