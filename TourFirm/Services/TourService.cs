@@ -90,5 +90,20 @@ namespace TourFirm.Services
 
             return await hotels.Take(count_take).ToListAsync();
         }
+
+
+
+        /// <summary>
+        /// Получить отель
+        /// </summary>
+        /// <param name="idHotel">Номер отеля</param>
+        /// <returns>Отель</returns>
+        public async Task<Hotel> GetHotel(int idHotel)
+        {
+            var hotel = await db.Hotels.FirstOrDefaultAsync(i => i.Id == idHotel);
+
+
+            return hotel;
+        }
     }
 }

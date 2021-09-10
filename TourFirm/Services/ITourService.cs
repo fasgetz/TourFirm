@@ -42,5 +42,13 @@ namespace TourFirm.Services
         /// <param name="prices">Учесть цены в выборке</param>
         /// <returns>Рандомные отели</returns>
         public Task<IEnumerable<Hotel>> GetRandomHotels(int count_take, bool prices = false);
+
+
+        /// <summary>
+        /// Получить отель
+        /// </summary>
+        /// <param name="idHotel">Номер отеля</param>
+        /// <returns>Отель</returns>
+        public Task<Hotel> GetHotel(int idHotel);
     }
 }

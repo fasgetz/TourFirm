@@ -32,6 +32,7 @@ namespace TourFirm.Controllers
 
             var list = hotels.Select(hotel => new
             {
+                Id = hotel.Id,
                 country = hotel.IdCityNavigation.IdCountryNavigation.Name,
                 city = hotel.IdCityNavigation.Name,
                 minPriceDay = hotel.HotelPrices.Min(i => i.PriceDay),
@@ -56,6 +57,7 @@ namespace TourFirm.Controllers
 
             var list = hotels.Select(hotel => new
             {
+                Id = hotel.Id,
                 country = hotel.IdCityNavigation.IdCountryNavigation.Name,
                 city = hotel.IdCityNavigation.Name,
                 minPriceDay = hotel.HotelPrices.Min(i => i.PriceDay),
@@ -76,6 +78,19 @@ namespace TourFirm.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+
+        public async Task<IActionResult> About(int idHotel)
+        {
+            var hotel = await tourService.GetHotel(idHotel);
+
+            if (hotel == null)
+            {
+                return BadRequest("Номер отеля не найден в БД");
+            }
+
+            return View(hotel);
         }
     }
 }
