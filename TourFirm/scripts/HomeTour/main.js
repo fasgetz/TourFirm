@@ -19,7 +19,7 @@ const vueApp = createApp({
 
     },
     mounted() {
-        axios.get('Tour/GetLastPopularTours')
+        axios.get('/Tour/GetLastPopularTours')
             .then(response => {
                 this.popularTours = response.data
 
@@ -30,7 +30,7 @@ const vueApp = createApp({
                 console.log(error.response.data)
             });
 
-        axios.get('Tour/GetRandomTours')
+        axios.get('/Tour/GetRandomTours')
             .then(response => {
                 this.randomTours = response.data
 

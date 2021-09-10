@@ -86,66 +86,9 @@
             <div class="text-center about__header">
                 <span>Подобрать идеальный тур для себя и всей семьи можно теперь онлайн. <br> Это легче, чем вы думаете!</span>
             </div>
-            <form id="searchtour" class="row mt-lg-5 mt-3">
-                <div class="form-group col-12 col-xl col-lg-4">
-                    <label for="exampleFormControlSelect1">Город вылета</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                        <option>Москва</option>
-                        <option>Санкт-Петербург</option>
-                        <option>Екатеринбург</option>
-                        <option>Новосибирск</option>
-                        <option>Самара</option>
-                    </select>
-                </div>
-                <div class="form-group mt-1 mt-lg-0 col-12 col-xl col-lg-4">
-                    <label for="exampleFormControlSelect1">Страна пребывания</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                        <option>Турция</option>
-                        <option>Болгария</option>
-                        <option>Греция</option>
-                        <option>Германия</option>
-                        <option>Белоруссия</option>
-                    </select>
-                </div>
-                <div class="form-group mt-1 mt-lg-0 col-12 col-xl col-lg-4">
-                    <label for="exampleFormControlSelect1">Дата вылета</label>
-                    <input class="form-control" type="date">
-                </div>
-                <div class="form-group mt-1 mt-lg-3 mt-xl-0 col-12 col-xl col-lg-6">
-                    <label for="exampleFormControlTextarea1">На сколько суток</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option selected>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                        <option>11</option>
-                        <option>12</option>
-                        <option>13</option>
-                        <option>14</option>
-                    </select>
-                </div>
-                <div class="form-group mt-1 mt-lg-3 mt-xl-0 col-12 col-xl col-lg-6">
-                    <label for="exampleFormControlTextarea1">Сколько человек</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                        <option selected>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
-                <div class="form-group mt-3 mt-lg-3 mt-xl-0 col-12 col-xl col-lg-12 d-flex align-items-end justify-content-center">
-                    <div class="search-button w-50">
-                        <button v-on:click="searchTour" class="btn btn-primary w-100">Найти туры</button>
-                    </div>
-                </div>
-            </form>
+            <div id="searchtour">
+                <searchcomponent v-bind:country="@ViewBag.idCountry" v-bind:days="@ViewBag.days" v-bind:humans="@ViewBag.countHumans"></searchcomponent>
+            </div>
             <div class="row mt-lg-5 mt-3 pb-5 justify-content-center">
                 <div class="col-lg-4 col-12 d-flex justify-content-center">
                     <div class="header_adv_item d-flex align-items-center">

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TourFirm.Models;
 using TourFirm.Models.DataBase;
 using TourFirm.Services;
 
@@ -71,6 +72,38 @@ namespace TourFirm.Controllers
         }
 
 
+
+
+        /// <summary>
+        /// Получить список туров
+        /// </summary>
+        /// <param name="idCountry">Номер страны</param>
+        /// <param name="days"> количество дней</param>
+        /// <param name="countHumans">Количество человек</param>
+        /// <returns></returns>
+        public async Task<IActionResult> Search(int idCountry, int days, int countHumans)
+        {
+
+            IEnumerable<Hotel> hotels = await tourService.GetLastPopularHotels(3, true);
+
+            var list = hotels.Select(hotel => new
+            {
+                Id = hotel.Id,
+                country = hotel.IdCityNavigation.IdCountryNavigation.Name,
+                city = hotel.IdCityNavigation.Name,
+                minPriceDay = hotel.HotelPrices.Min(i => i.PriceDay),
+                imagePath = hotel.PresentImagePath,
+                randDays = new Random().Next(5, 14),
+                HotelName = hotel.NameHotel
+            });
+
+
+            ViewBag.idCountry = idCountry;
+            ViewBag.days = days;
+            ViewBag.countHumans = countHumans;
+
+            return View(list);
+        }
 
 
 

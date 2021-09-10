@@ -11,6 +11,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using TourFirm.Models.DataBase;
 using TourFirm.Services;
+using TourFirm.Services.CountyCities;
 
 namespace TourFirm
 {
@@ -35,6 +36,7 @@ namespace TourFirm
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddScoped<ITourService, TourService>();
+            services.AddScoped<ICountryCitiesService, CountryCitiesService>();
 
 
         }

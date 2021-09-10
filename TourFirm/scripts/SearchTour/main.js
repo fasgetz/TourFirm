@@ -1,26 +1,9 @@
 ﻿import { createApp } from 'vue'
-import axios from 'axios'
+import searchcomponent from './searchcomponent.vue'
 
 const vueApplication = createApp({
-
-    data() {
-        return {
-
-        }
+    components: {
+        searchcomponent
     },
-    computed: {
-
-    },
-    methods: {
-        searchTour: function () {
-            event.preventDefault()
-
-
-
-            alert('test')
-        }
-    },
-    mounted() {
-        
-    },
+    
 }).mount('#searchtour');
