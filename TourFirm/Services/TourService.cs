@@ -56,5 +56,39 @@ namespace TourFirm.Services
 
             return await hotels.Take(count_take).ToListAsync();
         }
+
+
+
+        /// <summary>
+        /// Выборка рандомных отелей
+        /// </summary>
+        /// <param name="count_take">Количество отелей</param>
+        /// <returns>Рандомные отели</returns>
+        public async Task<IEnumerable<Hotel>> GetRandomHotels(int count_take)
+        {
+            IQueryable<Hotel>hotels = db.Hotels.OrderBy(r => Guid.NewGuid()).Include("IdCityNavigation.IdCountryNavigation");
+
+
+            return await hotels.Take(count_take).ToListAsync();
+        }
+
+        /// <summary>
+        /// Выборка рандомных отелей
+        /// </summary>
+        /// <param name="count_take">Количество отелей</param>
+        /// <param name="prices">Учесть цены в выборке</param>
+        /// <returns>Рандомные отели</returns>
+        public async Task<IEnumerable<Hotel>> GetRandomHotels(int count_take, bool prices = false)
+        {
+            IQueryable<Hotel>hotels = db.Hotels.OrderBy(r => Guid.NewGuid()).Include("IdCityNavigation.IdCountryNavigation");
+
+            // Если параметр prices добавлен, то присоединить таблицу цен отеля
+            if (prices == true)
+            {
+                hotels = hotels.Include("HotelPrices");
+            }
+
+            return await hotels.Take(count_take).ToListAsync();
+        }
     }
 }

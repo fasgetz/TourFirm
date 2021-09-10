@@ -24,5 +24,23 @@ namespace TourFirm.Services
         /// <param name="prices">Учесть цены в выборке</param>
         /// <returns>Последние добавленные популярные туры</returns>
         public Task<IEnumerable<Hotel>> GetLastPopularHotels(int count_take, bool prices = false);
+
+
+        /// <summary>
+        /// Выборка рандомных отелей
+        /// </summary>
+        /// <param name="count_take">Количество отелей</param>
+        /// <returns>Рандомные отели</returns>
+        public Task<IEnumerable<Hotel>> GetRandomHotels(int count_take);
+
+
+
+        /// <summary>
+        /// Выборка рандомных отелей
+        /// </summary>
+        /// <param name="count_take">Количество отелей</param>
+        /// <param name="prices">Учесть цены в выборке</param>
+        /// <returns>Рандомные отели</returns>
+        public Task<IEnumerable<Hotel>> GetRandomHotels(int count_take, bool prices = false);
     }
 }

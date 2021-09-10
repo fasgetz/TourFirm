@@ -28,7 +28,7 @@ namespace TourFirm.Controllers
         [HttpGet]
         public async Task<IActionResult> getRandomTours()
         {
-            IEnumerable<Hotel> hotels = await tourService.GetLastPopularHotels(3, true);
+            IEnumerable<Hotel> hotels = await tourService.GetRandomHotels(3, true);
 
             var list = hotels.Select(hotel => new
             {
@@ -36,7 +36,8 @@ namespace TourFirm.Controllers
                 city = hotel.IdCityNavigation.Name,
                 minPriceDay = hotel.HotelPrices.Min(i => i.PriceDay),
                 imagePath = hotel.PresentImagePath,
-                randDays = new Random().Next(5, 14)
+                randDays = new Random().Next(5, 14),
+                HotelName = hotel.NameHotel
             });
 
 
@@ -59,7 +60,8 @@ namespace TourFirm.Controllers
                 city = hotel.IdCityNavigation.Name,
                 minPriceDay = hotel.HotelPrices.Min(i => i.PriceDay),
                 imagePath = hotel.PresentImagePath,
-                randDays = new Random().Next(5, 14)
+                randDays = new Random().Next(5, 14),
+                HotelName = hotel.NameHotel
             });
 
 
