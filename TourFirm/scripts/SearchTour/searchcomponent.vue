@@ -100,6 +100,7 @@
             }
         },
         mounted() {
+
             axios.get('/CountryCities/GetCountriesTour')
                 .then(response => {
                     this.countries = response.data
@@ -110,10 +111,29 @@
                 });
 
 
+            if (this.days != null) {
+                console.log('days good' + this.days)
+                this.selectedDays = this.days
+            }
+            else {
+                console.log('days error' + this.days)
+            }
+            
+            if (this.humans != null) {
+                console.log('humans good' + this.humans)
+                this.selectedHumans = this.humans
+            }
+            else {
+                console.log('humans error' + this.humans)
+            }
 
-            this.selectedDays = this.days
-            this.selectedHumans = this.humans
-            this.selectedCountryId = this.country
+            if (this.country != null) {
+                console.log('country good' + this.country)
+                this.selectedCountryId = this.country
+            }
+            else {
+                console.log('country error' + this.country)
+            }
 
 
 

@@ -105,5 +105,19 @@ namespace TourFirm.Services
 
             return hotel;
         }
+
+
+
+        /// <summary>
+        /// Поиск туров
+        /// </summary>
+        /// <param name="idCountry">Страна туров</param>
+        /// <returns>Туры</returns>
+        public async Task<IEnumerable<Hotel>> GetHotels(int idCountry)
+        {
+            IQueryable<Hotel> hotels = db.Hotels.Where(i => i.IdCityNavigation.IdCountry == idCountry).Include("HotelPrices").Include("IdCityNavigation.IdCountryNavigation");
+
+            return await hotels.ToListAsync();
+        }
     }
 }

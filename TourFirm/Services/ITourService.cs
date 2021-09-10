@@ -9,6 +9,12 @@ namespace TourFirm.Services
     public interface ITourService
     {
 
+        /// <summary>
+        /// Поиск туров
+        /// </summary>
+        /// <param name="idCountry">Страна туров</param>
+        /// <returns>Туры</returns>
+        public Task<IEnumerable<Hotel>> GetHotels(int idCountry);
 
         /// <summary>
         /// Взять последние добавленные популярные туры

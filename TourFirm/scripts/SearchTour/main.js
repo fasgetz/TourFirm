@@ -6,4 +6,4 @@ const vueApplication = createApp({
         searchcomponent
     },
     
-}).mount('#searchtour');
+}).mount('#searchpanel');

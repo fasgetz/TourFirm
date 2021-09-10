@@ -72,19 +72,17 @@ namespace TourFirm.Controllers
         }
 
 
-
-
         /// <summary>
-        /// Получить список туров
+        /// Поиск отелей по параметрам
         /// </summary>
         /// <param name="idCountry">Номер страны</param>
-        /// <param name="days"> количество дней</param>
-        /// <param name="countHumans">Количество человек</param>
+        /// <param name="days"></param>
+        /// <param name="countHumans"></param>
         /// <returns></returns>
-        public async Task<IActionResult> Search(int idCountry, int days, int countHumans)
+        [HttpGet]
+        public async Task<IActionResult> getSearchHotels(int idCountry, int days, int countHumans)
         {
-
-            IEnumerable<Hotel> hotels = await tourService.GetLastPopularHotels(3, true);
+            IEnumerable<Hotel> hotels = await tourService.GetHotels(idCountry);
 
             var list = hotels.Select(hotel => new
             {
@@ -93,16 +91,29 @@ namespace TourFirm.Controllers
                 city = hotel.IdCityNavigation.Name,
                 minPriceDay = hotel.HotelPrices.Min(i => i.PriceDay),
                 imagePath = hotel.PresentImagePath,
-                randDays = new Random().Next(5, 14),
-                HotelName = hotel.NameHotel
+                randDays = days,
+                HotelName = hotel.NameHotel,
+                countHumans = countHumans,
+                RatingHotel = (int)hotel.RatingHotel
             });
 
+            return Ok(list);
+        }
 
+        /// <summary>
+        /// Получить список туров
+        /// </summary>
+        /// <param name="idCountry">Номер страны</param>
+        /// <param name="days"> количество дней</param>
+        /// <param name="countHumans">Количество человек</param>
+        /// <returns></returns>
+        public IActionResult Search(int idCountry, int days, int countHumans)
+        {
             ViewBag.idCountry = idCountry;
             ViewBag.days = days;
             ViewBag.countHumans = countHumans;
 
-            return View(list);
+            return View();
         }
 
 

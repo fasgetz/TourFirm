@@ -2,37 +2,14 @@
     Layout = "_LayoutTour";
 }
 
-<div id="app">
-    <section class="popular-block mt-3" v-if="popularTours != null">
+<div id="findedhotels">
+    <section class="popular-block mt-3">
         <div class="container">
-            <h3><b>Популярные направления</b></h3>
-            <div class="row mt-3">
-                <div v-for="item in popularTours" class="col-lg-4 col-12 mt-3 mt-lg-0 d-flex justify-content-center">
-                    <tourcomponent v-bind:tour=item></tourcomponent>
-                </div>
-            </div>
-            <div class="d-flex justify-content-center mt-3">
-                <a class="btn btn-outline-secondary" href="#">Все направления</a>
-            </div>
-        </div>
-    </section>
-    <section class="random-block mt-lg-5 mt-3" v-if="randomTours != null">
-        <div class="container">
-            <h3><b>Случайные направления</b></h3>
-            <div class="row mt-3">
-                <div v-for="item in randomTours" class="col-lg-4 col-12 mt-3 mt-lg-0 d-flex justify-content-center">
-                    <tourcomponent v-bind:tour=item></tourcomponent>
-                </div>
-            </div>
-            <div class="d-flex justify-content-center mt-3">
-                <a class="btn btn-outline-secondary" href="#">Все направления</a>
-            </div>
+            <h3><b>Найденные туры</b></h3>
+            <searchedcomponent v-bind:country="@ViewBag.idCountry" v-bind:days="@ViewBag.days" v-bind:humans="@ViewBag.countHumans"></searchedcomponent>
+
         </div>
     </section>
 </div>
 
-@section Scripts {
-
-    <script src="~/scripts/HomeTour.js" asp-append-version="true"></script>
-
-}
+<script src="~/scripts/SearchHotels.js" asp-append-version="true"></script>

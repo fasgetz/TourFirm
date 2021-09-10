@@ -125,6 +125,17 @@ header h1 {
     border-radius: 10px;    
 }
 
+
+.popular-item__ratingHotel {
+    position: absolute;
+    top: 0%;
+}
+
+    .popular-item__ratingHotel img {
+        width: 44px;
+        height: 44px;
+    }
+
 .tour-item:hover {
     transform: scale(0.9);
 }
