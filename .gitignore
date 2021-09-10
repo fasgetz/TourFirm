@@ -3,6 +3,15 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+
+# settings
+appsettings.json
+/appsettings.json
+
+# images folder
+wwwroot/img
+TourFirm/wwwroot/img
+
 # User-specific files
 *.rsuser
 *.suo
