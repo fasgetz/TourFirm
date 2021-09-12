@@ -125,6 +125,36 @@ namespace TourFirm.Controllers
         }
 
 
+        /// <summary>
+        /// Получить отель
+        /// </summary>
+        /// <param name="idHotel">Номер отеля</param>
+        /// <returns></returns>
+        [HttpGet]
+        public async Task<IActionResult> getHotel(int idHotel)
+        {
+            var hotel = await tourService.GetHotel(idHotel);
+
+            var servicesHotel = hotel.ServicesHotels.Select(i => i.IdServiceNavigation).GroupBy(i => i.IdCategoryNavigation);
+
+            foreach (var item in servicesHotel)
+            {
+                string s = item.Key.CategoryName;
+
+
+                var sdf = 34;
+            }
+
+            if (hotel == null)
+            {
+                return BadRequest("Номер отеля не найден в БД");
+            }
+
+
+            return Ok(hotel);
+        }
+
+
         public async Task<IActionResult> About(int idHotel)
         {
             var hotel = await tourService.GetHotel(idHotel);
@@ -133,6 +163,8 @@ namespace TourFirm.Controllers
             {
                 return BadRequest("Номер отеля не найден в БД");
             }
+
+            ViewData["Title"] = hotel.NameHotel;
 
             return View(hotel);
         }

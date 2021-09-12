@@ -1,13 +1,63 @@
 ﻿@model TourFirm.Models.DataBase.Hotel 
 
 @{
-    ViewData["Title"] = "ОНЛАЙН ТУРЫ";
+
     Layout = "_LayoutTour";
 }
 
-<div>
-    <img src="~/img/presentTours/@Model.PresentImagePath" alt="Alternate Text" />
-    <div>Об отеле</div>
+@section Css {
+    <link href="~/css/hotel.css" rel="stylesheet" asp-append-version="true" />
+}
+
+<div class="container mt-3">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-8 hotel">
+            <div class="hotel__img_block d-flex justify-content-center">
+                <img src="~/img/presentTours/@Model.PresentImagePath" alt="Alternate Text" />
+            </div>
+            <div class="mt-3 hotel__ratingHotel">
+                @{
+                                for (int i = 0; i < @Model.RatingHotel; i++)
+                                {
+                    <img src="/img/rating.svg"></img>
+                                }
+                }
+            </div>
+            <h3 class="mt-3">
+                Об отеле <b>@Model.NameHotel</b>
+            </h3>
+            <div>
+                @Model.DescriptionTour
+            </div>
+            <h5 class="mt-3"><b>Расстояние до моря:</b> @Model.DistanceToSea м</h5>
+            <h5 class="mt-3"><b>Линия (к морю):</b> @Model.LineNumber</h5>
+            <h5 class="mt-3"><b>Адрес отеля:</b> @Model.IdCityNavigation.IdCountryNavigation.Name, @Model.IdCityNavigation.Name</h5>
+            <div class="hotel__services mt-3">
+                <h5><b>Услуги отеля:</b></h5>
+                @{
+                    @foreach (var item in @Model.ServicesHotels.Select(i => i.IdServiceNavigation).GroupBy(i => i.IdCategoryNavigation))
+                    {
+                        <h5 class="mt-3 d-flex"><img class="hotel__img_service" src="~/img/category/@item.Key.ImageCategoryNamePath" alt="Alternate Text" /><div class="hotel__category-name">@item.Key.CategoryName</div></h5>
+                        @foreach (var service in item)
+                            {
+                                <div>@service.Description</div>
+                            }
+                    }
+                }
+            </div>
+            <div class="mt-3 hotel__prices">
+                <h5>Стоимость номеров в отеле за чел. / сутки:</h5>
+                @{
+                    foreach (var item in @Model.HotelPrices)
+                    {
+                                <div><b>@item.IdCategoryHotelNumberNavigation.Name</b> — @item.PriceDay.Value.ToString("N0") ₽</div>
+                    }
+                }
+            </div>
+
+        </div>
+    </div>
+
 </div>
 
 

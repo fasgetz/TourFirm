@@ -100,7 +100,7 @@ namespace TourFirm.Services
         /// <returns>Отель</returns>
         public async Task<Hotel> GetHotel(int idHotel)
         {
-            var hotel = await db.Hotels.FirstOrDefaultAsync(i => i.Id == idHotel);
+            var hotel = await db.Hotels.Include("ServicesHotels.IdServiceNavigation.IdCategoryNavigation").Include("HotelPrices.IdCategoryHotelNumberNavigation").Include("IdCityNavigation.IdCountryNavigation").FirstOrDefaultAsync(i => i.Id == idHotel);
 
 
             return hotel;

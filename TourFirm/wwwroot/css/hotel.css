@@ -1,0 +1,32 @@
+﻿
+
+.hotel__img_block img {
+    width: auto;
+    border-radius: 10px;
+}
+
+
+.hotel__ratingHotel img {
+    width: 30px;
+    height: 30px;
+}
+
+.hotel__prices {
+    
+}
+
+.hotel__category-name {
+    margin-left: 10px
+}
+
+.hotel__img_service {
+    width: 30px;
+    height: 30px;
+}
+
+
+@media (max-width: 768px) {
+    .hotel__img_block img {
+        width: 100%;
+    }
+}
