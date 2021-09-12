@@ -158,7 +158,7 @@
             <div class="row">
                 <div class="col-lg-6 col-12">
                     <div class="tour-present p-3">
-                        <a class="d-flex justify-content-center" href="#"><img src="img/egipet.jpg" alt="tour"></a>
+                        <a class="d-flex justify-content-center" asp-controller="Tour" asp-action="Search" asp-route-idCountry="6" asp-route-days="7" asp-route-countHumans="2"><img src="img/egipet.jpg" alt="tour"></a>
                         <h5 class="tour-present__header mt-3">Египет <span>Visa</span></h5>
                         <div class="tour-present__about">
                             Египет - это великолепная Хургада, популярный Шарм-эль-Шейх, Эль Гуна, которую называют египетской Венецией, климатический санаторий Сафага, Макади Бей, полюбившийся дайверам Дахаб, Таба.
@@ -170,7 +170,7 @@
                 </div>
                 <div class="col-lg-6 col-12 d-lg-block d-none">
                     <div class="tour-present p-3">
-                        <a href="#"><img src="img/tour1.jpg" alt="tour"></a>
+                        <a asp-controller="Tour" asp-action="Search" asp-route-idCountry="3" asp-route-days="7" asp-route-countHumans="2"><img src="img/tour1.jpg" alt="tour"></a>
                         <h5 class="tour-present__header mt-3">Турция <span>Без визы</span></h5>
                         <div class="tour-present__about">
                             Отдых в Турции – это лазурное море, бескрайние пляжи
@@ -393,7 +393,7 @@
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                     <label class="form-check-label text-muted" for="flexCheckDefault">
-                        Согласен с политикой защиты данных
+                        <a asp-controller="Oferta" asp-action="PersonalPrivacyOferta" class="text-decoration-none">Согласен с политикой защиты данных</a>
                     </label>
                 </div>
             </div>
