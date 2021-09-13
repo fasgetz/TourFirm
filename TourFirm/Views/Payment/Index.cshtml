@@ -1,5 +1,21 @@
-﻿@{
-    ViewData["Title"] = "ПУТЕВКИ В ТУРЦИЮ БОЛГАРИЮ ГРЕЦИЮ";
+﻿@model TourFirm.Models.DataBase.Hotel
+
+@{
+    ViewData["Title"] = "Оплата";
+    Layout = "_LayoutTour";
 }
 
-<h1>Оплата</h1>
+@section Css {
+    <link href="~/css/hotel.css" rel="stylesheet" asp-append-version="true" />
+}
+
+
+<div id="paymentblock">
+    <paymentcomponent hotel="@Model.SerializeObjectRefLoopHandl()"></paymentcomponent>
+</div>
+
+
+
+@section Scripts {
+    <script src="~/scripts/PaymentHotel.js" asp-append-version="true"></script>
+}

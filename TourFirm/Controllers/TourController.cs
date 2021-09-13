@@ -135,16 +135,6 @@ namespace TourFirm.Controllers
         {
             var hotel = await tourService.GetHotel(idHotel);
 
-            var servicesHotel = hotel.ServicesHotels.Select(i => i.IdServiceNavigation).GroupBy(i => i.IdCategoryNavigation);
-
-            foreach (var item in servicesHotel)
-            {
-                string s = item.Key.CategoryName;
-
-
-                var sdf = 34;
-            }
-
             if (hotel == null)
             {
                 return BadRequest("Номер отеля не найден в БД");
