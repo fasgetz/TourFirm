@@ -56,7 +56,19 @@
 
                 <div class="d-none d-md-block">
                     <div class="row justify-content-center">
-                        <a class="button-login btn w-25 d-none d-lg-block">Войти</a>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                        <div class="d-flex justify-content-around">
+                            <a class="button-login btn d-none d-lg-block" href="#">@User.Identity.Name</a>
+                            <form method="post" asp-controller="Account" asp-action="Logout">
+                                <button type="submit" class="button-login btn d-none d-lg-block">Выход</button>
+                            </form>
+                        </div>                        
+                        }
+                        else
+                        {
+                            <a class="button-login btn w-25 d-none d-lg-block" asp-controller="Account" asp-action="Login">Войти</a>
+                        }
                     </div>
                     <div class="navbar-collapse collapse d-md-inline-flex justify-content-between">
                         <ul class="navbar-nav flex-grow-1">
@@ -78,7 +90,19 @@
 
             </div>
             <div class="container-md text-center d-block d-md-none">
-                <a class="button-login btn text-white p-0">Войти</a>
+                @if (User.Identity.IsAuthenticated)
+                        {
+                            <div class="d-flex justify-content-around">
+                                <a class="button-login btn" href="#">@User.Identity.Name</a>
+                                <form method="post" asp-controller="Account" asp-action="Logout">
+                                    <button type="submit" class="button-login btn">Выход</button>
+                                </form>
+                            </div>
+                        }
+                        else
+                        {
+                            <a class="button-login btn w-25" asp-controller="Account" asp-action="Login">Войти</a>
+                        }
             </div>
         </nav>
         <div class="container">
@@ -123,9 +147,9 @@
             электронных билетов на автобусы.
             Расписание самолетов, поездов, электропоездов и автобусов подбираются Вами самостоятельно из
             официальных источников.
-            Электронные авиа- и ж/д билеты, электронные билеты на автобусы не предоставляются <a href="https://prosto-kemp.ru">prosto-kemp</a>
+            Электронные авиа- и ж/д билеты, электронные билеты на автобусы не предоставляются <a href="https://prosto-kemp.ru">prosto-kemp</a>.
 
-            Окончательную сумма на отели является окончательной на шаге подтверждения заказа.
+            Окончательная сумма на отели является окончательной на шаге подтверждения заказа.
             При использовании материалов ссылка на сайт <a href="https://prosto-kemp.ru">prosto-kemp</a> обязательна.
             <br />
             <a asp-controller="Oferta" asp-action="PersonalPrivacyOferta">Политика в отношении обработки персональных данных</a>

@@ -13,6 +13,8 @@ using System.Threading.Tasks;
 using TourFirm.Models.DataBase;
 using TourFirm.Services;
 using TourFirm.Services.CountyCities;
+using Microsoft.AspNetCore.Identity;
+using TourFirm.Models.Identity;
 
 namespace TourFirm
 {
@@ -35,6 +37,18 @@ namespace TourFirm
 
             services.AddDbContext<TourFirmDBContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddDbContext<ContextUsers>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("UsersIdentityConnection")));
+
+            services.AddIdentity<User, IdentityRole>(opts =>
+            {
+                opts.Password.RequireNonAlphanumeric = false;
+                opts.User.RequireUniqueEmail = true;    // уникальный email
+                opts.User.AllowedUserNameCharacters = ".@abcdefghijklmnopqrstuvwxyz"; // допустимые символы
+            })
+                .AddDefaultTokenProviders()
+                .AddEntityFrameworkStores<ContextUsers>();
 
             services.AddScoped<ITourService, TourService>();
             services.AddScoped<ICountryCitiesService, CountryCitiesService>();
@@ -60,6 +74,7 @@ namespace TourFirm
 
             app.UseRouting();
 
+            app.UseAuthentication();    // подключение аутентификации
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
