@@ -16,6 +16,17 @@ namespace TourFirm.Controllers
         public IActionResult PersonalPrivacyOferta()
         {
             return View();
+        }        
+        
+        
+        
+        /// <summary>
+        /// Оферта на туризм
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult Oferta()
+        {
+            return View();
         }
     }
 }
