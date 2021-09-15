@@ -18,18 +18,13 @@
 <body>
     <div class="d-block d-lg-none menu-mobile offcanvas offcanvas-start" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">website</h5>
+            <a asp-controller="Home" asp-action="Index"><h5 class="offcanvas-title" id="offcanvasExampleLabel">ПРОСТО КЭМП</h5></a>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body text-center">
-            <a href="#">
-                <div class="p-2 active">
-                    Прайс лист
-                </div>
-            </a>
-            <a href="#">
+            <a asp-controller="Tour" asp-action="Index">
                 <div class="p-2">
-                    Галерея работ
+                    Онлайн туры
                 </div>
             </a>
             <a href="#">
@@ -37,7 +32,7 @@
                     Контакты
                 </div>
             </a>
-            <a href="#">
+            <a asp-controller="Oferta" asp-action="Oferta">
                 <div class="p-2">
                     Оферта
                 </div>
@@ -72,14 +67,14 @@
                     </div>
                     <div class="navbar-collapse collapse d-md-inline-flex justify-content-between">
                         <ul class="navbar-nav flex-grow-1">
-                            <li class="nav-item nav-item-active p-1">
+                            <li class="nav-item p-1">
                                 <a class="nav-link btn" asp-controller="Tour" asp-action="Index"><span>Онлайн туры</span></a>
                             </li>
                             <li class="nav-item p-1">
                                 <a class="nav-link btn " href="#payment"><span>Контакты</span></a>
                             </li>
                             <li class="nav-item p-1">
-                                <a class="nav-link btn " href="#chat"><span>Оферта</span></a>
+                                <a class="nav-link btn " asp-controller="Oferta" asp-action="Oferta"><span>Оферта</span></a>
                             </li>
                             <li class="nav-item p-1">
                                 <a class="nav-link btn " href="#chat"><span>Справочная</span></a>
@@ -161,6 +156,7 @@
 
     <script src="~/scripts/chunk-vendors.js"></script>
     <script src="~/scripts/SearchTour.js" asp-append-version="true"></script>
+    <script src="~/js/activemenu.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
