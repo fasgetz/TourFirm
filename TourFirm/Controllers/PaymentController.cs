@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,8 @@ using TourFirm.Services;
 
 namespace TourFirm.Controllers
 {
+
+    [Authorize]
     public class PaymentController : Controller
     {
         private readonly ITourService service;
@@ -44,9 +47,12 @@ namespace TourFirm.Controllers
         [HttpPost]
         public IActionResult PayHotel([FromBody]PaymentHotelViewModel model)
         {
+            if (ModelState.IsValid)
+            {
+                return Ok("okay model");
+            }
 
-
-            return Ok();
+            return Ok("success");
         }
     }
 }

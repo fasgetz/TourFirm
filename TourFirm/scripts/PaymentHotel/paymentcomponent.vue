@@ -6,6 +6,7 @@
                 <div class="hotel__img_block d-flex justify-content-center mt-3 mb-3">
                     <img v-bind:src="'/img/presentTours/' + hotelJson.PresentImagePath" alt="Alternate Text" />
                 </div>
+                <p>{{selectedHotelClass.Id}}</p>
                 <div class="hotel_description">
                     {{hotelJson.DescriptionTour}}
                 </div>
@@ -60,11 +61,11 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Фамилия</label>
-                        <input type="text" class="form-control" v-model="humansData[item-1].family" placeholder="Имя">
+                        <input type="text" class="form-control" v-model="humansData[item-1].family" placeholder="Фамилия">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Отчество</label>
-                        <input type="text" class="form-control" v-model="humansData[item-1].lastname" placeholder="Имя">
+                        <input type="text" class="form-control" v-model="humansData[item-1].lastname" placeholder="Отчество">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Дата рождения</label>
@@ -105,7 +106,14 @@
         methods: {
             payHotel: function () {
 
-                axios.post('/Payment/PayHotel', obj)
+                let obj = {
+                    days: this.selectedDays,
+                    numberhotelclass: this.selectedHotelClass.Id,
+                    humans: this.selectedHumans,
+                    persons: this.humansData
+                }
+
+                axios.post('/api/Payment/PayHotel', obj)
                     .then(response => {
 
                         console.log(response.data)

@@ -27,7 +27,7 @@
                     Онлайн туры
                 </div>
             </a>
-            <a href="#">
+            <a asp-controller="Contacts" asp-action="Index">
                 <div class="p-2">
                     Контакты
                 </div>
@@ -71,13 +71,13 @@
                                 <a class="nav-link btn" asp-controller="Tour" asp-action="Index"><span>Онлайн туры</span></a>
                             </li>
                             <li class="nav-item p-1">
-                                <a class="nav-link btn " href="#payment"><span>Контакты</span></a>
+                                <a class="nav-link btn" asp-controller="Contacts" asp-action="Index"><span>Контакты</span></a>
                             </li>
                             <li class="nav-item p-1">
-                                <a class="nav-link btn " asp-controller="Oferta" asp-action="Oferta"><span>Оферта</span></a>
+                                <a class="nav-link btn" asp-controller="Oferta" asp-action="Oferta"><span>Оферта</span></a>
                             </li>
                             <li class="nav-item p-1">
-                                <a class="nav-link btn " href="#chat"><span>Справочная</span></a>
+                                <a class="nav-link btn" href="#chat"><span>Справочная</span></a>
                             </li>
                         </ul>
                     </div>

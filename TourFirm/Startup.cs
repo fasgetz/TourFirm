@@ -30,6 +30,15 @@ namespace TourFirm
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            //services.AddCors(options =>
+            //{
+            //    options.AddPolicy("AllowAll", p =>
+            //    {
+            //        p.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+            //    });
+            //});
+            
             services.AddControllersWithViews().AddRazorRuntimeCompilation()
                 .AddNewtonsoftJson(options =>
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
@@ -50,6 +59,9 @@ namespace TourFirm
                 .AddDefaultTokenProviders()
                 .AddEntityFrameworkStores<ContextUsers>();
 
+
+            
+
             services.AddScoped<ITourService, TourService>();
             services.AddScoped<ICountryCitiesService, CountryCitiesService>();
 
@@ -59,6 +71,8 @@ namespace TourFirm
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -69,20 +83,38 @@ namespace TourFirm
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+
+            //app.UseCors("AllowAll");
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            
+
             app.UseRouting();
+
+            //app.UseCors(builder => builder.AllowAnyOrigin());
 
             app.UseAuthentication();    // подключение аутентификации
             app.UseAuthorization();
 
+
+
             app.UseEndpoints(endpoints =>
             {
+                //endpoints.MapControllers();
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                //endpoints.MapControllerRoute(
+                //    name: "api",
+                //    pattern: "api/{controller=Payment}/{action=test}/{id?}");
             });
+
+
         }
     }
 }

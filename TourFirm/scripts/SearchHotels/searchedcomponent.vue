@@ -1,6 +1,6 @@
 ﻿<template>
     <div class="row mt-3">
-        <div v-for="item in searchHotels" class="col-lg-6 col-12 mt-3 mt-lg-0 d-flex justify-content-center">
+        <div v-for="item in searchHotels" class="col-lg-6 col-12 mt-3 mt-lg-3 d-flex justify-content-center">
             <tourcomponent v-bind:tour=item></tourcomponent>
         </div>
     </div>
